@@ -1,6 +1,6 @@
 # Predicting Credit Risk
 
-In this project I have built a machine learning model that attempts to predict whether a loan from LendingClub will become high risk or not.
+In this project I built a machine learning model that attempts to predict whether a loan from LendingClub will become high risk or not.
 
 ## Background
 LendingClub is a peer-to-peer lending services company that allows individual investors to partially fund personal loans as well as buy and sell notes backing the loans on a secondary market. LendingClub offers their previous data through an API.I have used LendingClub data to create machine learning models to classify the risk level of given loans.

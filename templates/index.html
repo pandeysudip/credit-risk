@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>postdoc salary</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+        <!-- Our CSS -->
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    </head>
+    <body>
+        <section class='bg-secondary'>
+
+        
+
+        <div class='bg-black p-5 text-primary text-center'><h1>Credit Risk Evaluation</h1>
+            <p class='text-white'>Machine learning model that attempts to predict whether a loan from LendingClub will become high risk or not</p>
+         </div>
+         <div class='bg-secondary'>
+             <h3 class='text-center text-warning'>Backgrond</h3>
+         <p class='text-white p-2'>
+             LendingClub is a peer-to-peer lending services company that allows individual investors to partially fund personal loans as well as buy and sell notes backing the loans on a secondary market. LendingClub offers their previous data through an API.This website used LendingClub data to create machine learning models to classify the risk level of given loans.
+         </p>
+         
+        </div>
+        <section class="bg-warning">
+            <h3 class='text-info '>Please enter the follwing information below to determine whether credit will be high risk or not. </h3>
+            <div class= "p-5" >
+                <form action = "http://127.0.0.1:5000/index.html" method = "post">
+                    
+                    <div class="mb-3  lead text-primary">
+                        <label  for="Loan Amount">Loan Amount</label>
+                        <input  type="number" step="any" name="loan_amnt" id="loan_amnt" />
+                        
+                    </div>
+                    <div class="mb-3  lead text-primary">
+                        <label  for="Per Capita Income">Interest Rate</label>
+                        <input  type="number" step="any" name="int_rate" id="int_rate" />
+                        
+                    </div>
+                    <div class="mb-3  lead text-primary">
+                        <label  for="Installment">Installment</label>
+                        <input  type="number" step="any" name="installment" id="installment" />
+                        
+                    </div>
+
+                    <div class="mb-3  lead text-primary">
+                        <label  for="Annual income">Annual Income</label>
+                        <input  type="number" step="any" name="anual_inc" id="anual_inc" />
+                        
+                    </div>
+                    
+                    <!-- Form submit button -->
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-lg" type="submit" value="submit">Submit</button>
+                    </div>
+                    
+                </form>
+                
+            </div>
+            <div class=" bg-success row justify-content-md-center">
+                <h1 class="text-center">Prediction Result</h1>
+                <!--<h3>List of values{{ pred }}</h3>-->
+                <h3 class=" text-white">Prediction using best model is:(0 is high risk, 1 is low risk ): {{ prediction }}</h3>
+      
+          </div>
+    
+        </section>
+    </section>
+
+    
+    
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
