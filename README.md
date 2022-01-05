@@ -18,13 +18,15 @@ Used an entire year's worth of data (2019) to predict the credit risk of loans f
 ## Data cleaning
 After downloading the data, I needed to clean it up so that it was usable for our model. I made the following changes using pandas:
 
-* Parsed numeric data out of salary
-* Removed rows without salary
-* Parsed rating out of company text
-* Made a new column for company state
-* Added a column for if the job was at the company’s headquarters
-* Transformed founded date into age of company
-* Made columns for if different skills were listed in the job description:
+* Removed rows with nan values
+* Concanated all the four quatar data in one using pd.concat
+* Selected only important columns
+* Converted interest rate to numerical
+* Converted the target column values to low_risk and high_risk based on their values
+* Selected only low risk and high risk rows
+* Created  and saved under-sampling data for modeling
+* Created  and saved over-sampling data for modeling
+* Performed similar operation for test data also
 
 ## Under Sampling and Over Sampling
 In the original dataset, only 2.2% of loans are categorized as high risk. To get a truly accurate model, special techniques were used on imbalanced data.
@@ -39,13 +41,13 @@ Created a training set from the 2019 loans using `pd.get_dummies()` to convert t
 
 ## Model Building
 Created different classification models on this data. Different models are:
-### Stochastic Gradent Descent Classifier
-### KNeighbors Classifier
-### Support Vector Classifier
-### Decision Tree Classifier
-### Random Forest Classifier
-### Extremely Random Trees
-### Boosting- AdaBoostClassifier
+#### 1.Stochastic Gradent Descent Classifier
+#### 2.KNeighbors Classifier
+#### 3.Support Vector Classifier
+#### 4.Decision Tree Classifier
+#### 5.Random Forest Classifier
+#### 6.Extremely Random Trees
+#### 7.Boosting- AdaBoostClassifier
 
 
 ## Tuning hyperparamaters using Grid Search CV
