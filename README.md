@@ -42,42 +42,28 @@ Created a training set from the 2019 loans using `pd.get_dummies()` to convert t
 
 ## Model Building
 Created different classification models on this data. Different models are:
-#### 1.Stochastic Gradent Descent Classifier
-#### 2.KNeighbors Classifier
-#### 3.Support Vector Classifier
-#### 4.Decision Tree Classifier
-#### 5.Random Forest Classifier
-#### 6.Extremely Random Trees
-#### 7.Boosting- AdaBoostClassifier
+* Stochastic Gradent Descent Classifier
+* KNeighbors Classifier
+* Support Vector Classifier
+* Decision Tree Classifier
+* Random Forest Classifier
+* Extremely Random Trees
+* Boosting- AdaBoostClassifier
 
 
-## Tuning hyperparamaters using Grid Search CV
-
-
-## Tuning hyperparamaters using Randomized Search CV
-
+## Tuning hyperparamaters for all model
+* Grid Search CV
+* Randomized Search CV
 
 ## Trying to improve score by selecting important features 
 USing SelectFromModel to fit the Adaboster Classifier model and get the important features only to fit all the model desceribed above.
 
 ## Model Performance
-* Stochastic Gradent Descent Classifier
-* KNeighbors Classifier
-* Support Vector Classifier
-* Decision Tree Classifier
-* Random Forest Classifier
-* Extremely Random Trees
-* Boosting- AdaBoostClassifier
+
 ![Images3](Images/per1.png)
 
 ### Model Performance after selecting only important features
-* Stochastic Gradent Descent Classifier
-* KNeighbors Classifier
-* Support Vector Classifier
-* Decision Tree Classifier
-* Random Forest Classifier
-* Extremely Random Trees
-* Boosting- AdaBoostClassifier
+
 ![Images2](Images/per2.png)
 
 ## Comparing real and predicted value using different value for sample test set
