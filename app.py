@@ -1,14 +1,13 @@
 from flask import Flask, render_template, redirect, jsonify, request
 import utilis
 from flask_sqlalchemy import SQLAlchemy
-#from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.ext.automap import automap_base
 import os
 # Create an instance of Flask
 app = Flask(__name__)
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(
-    'DATABASE_URL', '')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost:5432/credit-risk'
 
 # Remove tracking modifications
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -16,25 +15,23 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 # getting the tables from database-1st approach
-test = db.Table('train', db.metadata, autoload=True, autoload_with=db.engine)
-train = db.Table('test', db.metadata, autoload=True, autoload_with=db.engine)
-test_dumy = db.Table('train_dumy', db.metadata,
-                     autoload=True, autoload_with=db.engine)
-train_dumy = db.Table('test_dumy', db.metadata,
-                      autoload=True, autoload_with=db.engine)
+#test = db.Table('train', db.metadata, autoload=True, autoload_with=db.engine)
+#train = db.Table('test', db.metadata, autoload=True, autoload_with=db.engine)
+#test_dumy = db.Table('train_dumy', db.metadata,autoload=True, autoload_with=db.engine)
+#train_dumy = db.Table('test_dumy', db.metadata,autoload=True, autoload_with=db.engine)
 # query be like: db.session.query(train).all()
 
 
 # getting the tables from database-2nd approach
 # reflect an existing database into a new model
-#Base = automap_base()
-#Base.prepare(db.engine, reflect=True)
+Base = automap_base()
+Base.prepare(db.engine, reflect=True)
 
 # Save references to each table
-#train = Base.classes.train
-#test = Base.classes.test
-#train_dumy = Base.classes.train_dumy
-#test_dumy = Base.classes.test_dumy
+train = Base.classes.train
+test = Base.classes.test
+train_dumy = Base.classes.train_dumy
+test_dumy = Base.classes.test_dumy
 
 
 @app.route('/')
