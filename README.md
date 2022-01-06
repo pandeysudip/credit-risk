@@ -1,4 +1,6 @@
 # Predicting Credit Risk
+The website is deployed to Heroku at: https://pred-credit-risk.herokuapp.com/
+
 
 In this project, I built a machine learning model that attempts to predict whether a loan from LendingClub will become high risk or not.
 
