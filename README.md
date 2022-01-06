@@ -75,4 +75,6 @@ Used Flask templating to create a new HTML page that predict the credit risk wit
 Created a different route that take the user input and predict the credit risk with the best model.
 
 The website is deployed to Heroku at: https://pred-credit-risk.herokuapp.com/
+
+
 ![Images6.png](Images/credit.png)
