@@ -1,6 +1,4 @@
 from flask import Flask, render_template, redirect, jsonify, request
-import json
-from bson import json_util
 import utilis
 # Create an instance of Flask
 app = Flask(__name__)
