@@ -1,7 +1,18 @@
 from flask import Flask, render_template, redirect, jsonify, request
 import utilis
+from flask_sqlalchemy import SQLAlchemy
+import os
 # Create an instance of Flask
 app = Flask(__name__)
+
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(
+    'DATABASE_URL', '')
+
+# Remove tracking modifications
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
 
 
 @app.route('/')
