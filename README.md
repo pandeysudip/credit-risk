@@ -42,7 +42,7 @@ Created a training set from the 2019 loans using `pd.get_dummies()` to convert t
 
 ## Model Building
 Created different classification models on this data. Different models are:
-* Stochastic Gradent Descent Classifier
+* Logistic Regression
 * KNeighbors Classifier
 * Support Vector Classifier
 * Decision Tree Classifier
@@ -56,7 +56,7 @@ Created different classification models on this data. Different models are:
 * Randomized Search CV
 
 ## Trying to improve score by selecting important features 
-USing SelectFromModel to fit the Adaboster Classifier model and get the important features only to fit all the model desceribed above.
+Using SelectFromModel to fit the Adaboster Classifier model and get the important features only to fit all the model desceribed above.
 
 ## Model Performance
 
