@@ -20,9 +20,10 @@ def predic():
         interest_rate = request.form.get("int_rate")
         installement = request.form.get("installment")
         anual_income = request.form.get('anual_inc')
+        #home_owenership = request.form.get("home_ownership")
 
         variables = [loan_amount, interest_rate,
-                     installement,   anual_income]
+                     installement,  anual_income]
         predict = utilis.preprocess(variables)
         predict, *_ = predict
         # Return the template
