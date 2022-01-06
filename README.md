@@ -1,6 +1,6 @@
 # Predicting Credit Risk
 
-In this project I built a machine learning model that attempts to predict whether a loan from LendingClub will become high risk or not.
+In this project, I built a machine learning model that attempts to predict whether a loan from LendingClub will become high risk or not.
 
 
 ## Background
@@ -70,5 +70,9 @@ USing SelectFromModel to fit the Adaboster Classifier model and get the importan
 ![Images/landingResize.png](Images/pred.png)
 
 ## Productionization
+Used Flask templating to create a new HTML page that predict the credit risk with the best model. The model was saved using pickle module.
+
+Created a different route that take the user input and predict the credit risk with the best model.
+
 The website is deployed to Heroku at: https://pred-credit-risk.herokuapp.com/
 ![Images6.png](Images/credit.png)
