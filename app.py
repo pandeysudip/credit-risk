@@ -6,8 +6,11 @@ import os
 # Create an instance of Flask
 app = Flask(__name__)
 
+uri = os.environ.get('DATABASE_URL', '')
+if uri.startswith("postgres://"):
+    uri = uri.replace("postgres://", "postgresql://", 1)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '')
+app.config['SQLALCHEMY_DATABASE_URI'] = uri
 # 'postgresql://localhost:5432/credit-risk-eval'
 
 
