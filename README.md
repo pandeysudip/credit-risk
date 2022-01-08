@@ -69,7 +69,7 @@ Using SelectFromModel to fit the Adaboster Classifier model and get the importan
 ![Images2](Images/per2.png)
 
 ## Comparing real and predicted value using different value for sample test set
-![Images/landingResize.png](Images/pred.png)
+![Images/landingResize.png](Images/comp.png)
 
 ## Productionization
 Used Flask templating to create a new HTML page that predict the credit risk with the best model. The model was saved using pickle module.
