@@ -10,7 +10,7 @@ uri = os.environ.get('DATABASE_URL', '')
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 
-# 'postgresql://localhost:5432/credit-risk-eval'  # uri
+# 'postgresql://localhost:5432/credit-risk-eval'  #
 app.config['SQLALCHEMY_DATABASE_URI'] = uri
 #
 
