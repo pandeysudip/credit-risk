@@ -6,7 +6,7 @@ import random
 
 
 def preprocess(variables):
-    if variables[0] != float or variables[1] != float or variables[2] != float or variables[3] != float:
+    if variables[0] == '' or variables[1] == '' or variables[2] == '' or variables[3] == '':
         return "Please enter the above information first and click submit. "
     else:
         imp_variables = [variables[0], variables[1],
