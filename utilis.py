@@ -26,4 +26,7 @@ def preprocess(variables):
     trained_model = joblib.load('model.pkl')
     prediction = trained_model.predict(X_scaler)
 
-    return prediction
+    if prediction == [0]:
+        return "There is high risk for lending loan"
+    else:
+        return "There is no risk for lending loan!!!"

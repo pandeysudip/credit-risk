@@ -17,6 +17,28 @@ html {
   height: 800%;
 }
 
+body {
+  background: url('../Images/back5.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+#back2 {
+  background: url('../Images/back4.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#back3 {
+  background: url('../Images/back.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
 /* for id # and for class.*/
 /* no need to nested inside but easier to read*/
 .chartBox{

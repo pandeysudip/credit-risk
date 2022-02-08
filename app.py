@@ -10,8 +10,8 @@ uri = os.environ.get('DATABASE_URL', '')
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = uri
-# 'postgresql://localhost:5432/credit-risk-eval'
+app.config['SQLALCHEMY_DATABASE_URI'] = uri#'postgresql://localhost:5432/credit-risk-eval'  # 
+#
 
 
 # Remove tracking modifications
@@ -58,7 +58,7 @@ def predic():
         variables = [loan_amount, interest_rate,
                      installement,  anual_income]
         predict = utilis.preprocess(variables)
-        predict, *_ = predict
+        #predict, *_ = predict
         # Return the template
 
         return render_template("index.html", pred=variables, prediction=predict)

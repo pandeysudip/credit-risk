@@ -12,22 +12,26 @@
         <link rel="stylesheet" type="text/css" href="static/css/style.css">
     </head>
     <body>
-        <section class='bg-secondary'>
+        <section class=''>
 
         
 
-        <div class='bg-black p-5 text-primary text-center'><h1>Credit Risk Evaluation</h1>
-            <p class='text-white'>Machine learning model that attempts to predict whether a loan from LendingClub will become high risk or not</p>
+        <div id="back" class=' bg-black p-3 text-success text-center '><h1>Credit Risk Evaluation</h1>
+            
+
+        </div>
+        <div>
+            <h2 class='text-danger p-5'>Artifical Intelligence to predict whether a loan will become high risk or not.</h2>
          </div>
-         <div class='bg-secondary'>
-             <h3 class='text-center text-warning'>Backgrond</h3>
-         <p class='text-white p-2'>
+         <div class='p-5'>
+             <h3 class='text-center text-warning'></h3>
+         <p class='text-danger lead p-5'>
              LendingClub is a peer-to-peer lending services company that allows individual investors to partially fund personal loans as well as buy and sell notes backing the loans on a secondary market. LendingClub offers their previous data through an API.This website used LendingClub data to create machine learning models to classify the risk level of given loans.
          </p>
          
         </div>
-        <section class="bg-warning">
-            <h3 class='text-info '>Please enter the follwing information below to determine whether credit will be high risk or not. </h3>
+        <section id="back2" class="bg-primary">
+            <h3 class='text-primary p-5 '>Please enter the follwing information below to determine whether credit will be high risk or not. </h3>
             <div class= "p-5" >
                 <form action = "/send" method = "POST" role="form">
                     
@@ -55,22 +59,31 @@
                     </div>
                     
                     <!-- Form submit button -->
-                    <div class="d-grid">
+                    <div class="d-grid p-5">
                         <button class="btn btn-primary btn-lg" type="submit" value="submit">Submit</button>
                     </div>
                     
                 </form>
                 
             </div>
-            <div class=" bg-success row justify-content-md-center">
-                <h1 class="text-center">Prediction Result</h1>
+            <div id="back3" class=" p-5 bg-success row justify-content-md-center">
+                <h1 class="text-center text-warning"></h1>
                 <!--<h3>List of values{{ pred }}</h3>-->
-                <h3 class=" text-white">Prediction using best model is:(0 is high risk, 1 is low risk ): {{ prediction }}</h3>
+                <h1 class=" text-white text-center"> {{ prediction }}</h1>
       
           </div>
+
     
         </section>
-    </section>
+        <div class="text-center text-warning p-5">
+           <h3> For any inquriry please contact me at <a href="https://pandeysudip.github.io/web/" target="_blank">SudipPandey</a></h3>
+        </div>
+
+        <script>
+            function myFunction() {
+              document.getElementById("back3").reset();
+            }
+        </script>
 
     
     
