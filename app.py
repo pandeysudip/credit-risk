@@ -10,7 +10,8 @@ uri = os.environ.get('DATABASE_URL', '')
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = uri#'postgresql://localhost:5432/credit-risk-eval'  # 
+# 'postgresql://localhost:5432/credit-risk-eval'  # uri
+app.config['SQLALCHEMY_DATABASE_URI'] = uri
 #
 
 
@@ -41,6 +42,12 @@ db = SQLAlchemy(app)
 
 @ app.route('/')
 def home():
+    # Return the template
+    return render_template('index.html')
+
+
+@ app.route('/index.html')
+def home2():
     # Return the template
     return render_template('index.html')
 
